@@ -200,11 +200,3 @@ Found a bug or have a feature request? [Open an issue](https://github.com/Jason-
 **Made with ❤️ by [Jason Mendes](https://github.com/Jason-Mendes)**
 
 *Transform messy text into clean, readable content with just one click!*
-
-### ✅ Tips
-
-- Make sure the file is saved with the **.md** extension — _not_ `.txt`.
-- Do **not** wrap the whole thing in \`\`\`markdown — only use those for actual code blocks.
-- GitHub will automatically render titles, bullet points, and links.
-
-
