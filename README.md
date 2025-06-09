@@ -82,6 +82,8 @@ This text has multiple spaces and weird formatting.
 - **Vanilla CSS** (Grid & Flexbox)
 - **Babel Standalone** (in-browser JSX)
 - No build tools required — single `index.html` file
+- *https://claude.ai/chat/d2adf472-76b6-4bf9-b39c-5ce770203809*
+- *https://chatgpt.com/c/68469897-31dc-8012-850e-14ea61ade544*
 
 ### Browser Support
 
