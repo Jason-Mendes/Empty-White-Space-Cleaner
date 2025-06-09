@@ -294,13 +294,15 @@
             const originalStats = useMemo(() => {
                 const chars = originalText.length;
                 const words = originalText.trim() ? originalText.trim().split(/\s+/).length : 0;
-                return { chars, words };
+                const tokens = originalText ? originalText.split(/\s+|\n+|[.,!?;:()\[\]{}"'`~@#$%^&*+=<>|\\/\-_]/g).filter(token => token.length > 0).length : 0;
+                return { chars, words, tokens };
             }, [originalText]);
 
             const cleanedStats = useMemo(() => {
                 const chars = cleanedText.length;
                 const words = cleanedText ? cleanedText.split(/\s+/).length : 0;
-                return { chars, words };
+                const tokens = cleanedText ? cleanedText.split(/\s+|\n+|[.,!?;:()\[\]{}"'`~@#$%^&*+=<>|\\/\-_]/g).filter(token => token.length > 0).length : 0;
+                return { chars, words, tokens };
             }, [cleanedText]);
 
             return (
@@ -333,6 +335,10 @@
                                         <span className="stat-label">Words:</span>
                                         <span>{originalStats.words}</span>
                                     </div>
+                                    <div className="stat">
+                                        <span className="stat-label">Tokens:</span>
+                                        <span>{originalStats.tokens}</span>
+                                    </div>
                                 </div>
                             </div>
 
@@ -356,6 +362,10 @@
                                     <div className="stat">
                                         <span className="stat-label">Words:</span>
                                         <span>{cleanedStats.words}</span>
+                                    </div>
+                                    <div className="stat">
+                                        <span className="stat-label">Tokens:</span>
+                                        <span>{cleanedStats.tokens}</span>
                                     </div>
                                 </div>
                                 <div className="buttons-container">
