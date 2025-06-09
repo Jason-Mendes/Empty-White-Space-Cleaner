@@ -220,20 +220,29 @@
             }
         }
 
-        .copy-success {
+        .notification {
             position: fixed;
             top: 2rem;
             right: 2rem;
-            background: rgba(88, 166, 255, 0.2);
-            border: 1px solid rgba(88, 166, 255, 0.4);
             border-radius: 8px;
             padding: 1rem 1.5rem;
-            color: #58a6ff;
             font-weight: 500;
             -webkit-backdrop-filter: blur(10px);
             backdrop-filter: blur(10px);
             animation: slideInRight 0.3s ease-out, slideOutRight 0.3s ease-out 2.7s;
             box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+        }
+
+        .notification-success {
+            background: rgba(88, 166, 255, 0.2);
+            border: 1px solid rgba(88, 166, 255, 0.4);
+            color: #58a6ff;
+        }
+
+        .notification-error {
+            background: rgba(255, 88, 88, 0.2);
+            border: 1px solid rgba(255, 88, 88, 0.4);
+            color: #ff5858;
         }
 
         @keyframes slideInRight {
@@ -273,23 +282,37 @@
 
         function WhitespaceCleaner() {
             const [originalText, setOriginalText] = useState('');
-            const [showCopySuccess, setShowCopySuccess] = useState(false);
+            const [previousText, setPreviousText] = useState('');
+            const [notification, setNotification] = useState({ show: false, message: '', type: '' });
 
             const cleanedText = useMemo(() => cleanWhitespace(originalText), [originalText]);
+
+            const showNotification = useCallback((message, type = 'success') => {
+                setNotification({ show: true, message, type });
+                setTimeout(() => setNotification({ show: false, message: '', type: '' }), 3000);
+            }, []);
 
             const handleCopy = useCallback(async () => {
                 try {
                     await navigator.clipboard.writeText(cleanedText);
-                    setShowCopySuccess(true);
-                    setTimeout(() => setShowCopySuccess(false), 3000);
+                    showNotification('Cleaned text copied to clipboard!');
                 } catch (err) {
                     console.error('Failed to copy text:', err);
+                    showNotification('Failed to copy text', 'error');
                 }
-            }, [cleanedText]);
+            }, [cleanedText, showNotification]);
 
             const handleClear = useCallback(() => {
+                setPreviousText(originalText);
                 setOriginalText('');
-            }, []);
+                showNotification('All text cleared!');
+            }, [originalText, showNotification]);
+
+            const handleUndo = useCallback(() => {
+                setOriginalText(previousText);
+                setPreviousText('');
+                showNotification('Text restored!');
+            }, [previousText, showNotification]);
 
             const originalStats = useMemo(() => {
                 const chars = originalText.length;
@@ -385,14 +408,23 @@
                                     >
                                         Clear All
                                     </button>
+                                    {previousText && (
+                                        <button
+                                            className="button"
+                                            onClick={handleUndo}
+                                            aria-label="Undo clear"
+                                        >
+                                            Undo Clear
+                                        </button>
+                                    )}
                                 </div>
                             </div>
                         </div>
                     </div>
 
-                    {showCopySuccess && (
-                        <div className="copy-success" role="alert">
-                            Copied to clipboard!
+                    {notification.show && (
+                        <div className={`notification ${notification.type === 'error' ? 'notification-error' : 'notification-success'}`} role="alert">
+                            {notification.message}
                         </div>
                     )}
                 </div>
