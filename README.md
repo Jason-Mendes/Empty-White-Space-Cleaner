@@ -1,4 +1,3 @@
-
 # Whitespace Cleaner
 
 A modern, responsive web application that transforms messy text into clean, readable content by removing excessive whitespace while preserving the structure and meaning of your text.
@@ -13,66 +12,67 @@ The Whitespace Cleaner is a powerful yet simple tool designed to help you clean 
 
 ### What it does
 
-- **Removes excessive whitespace**: Converts multiple consecutive whitespace characters into single spaces  
-- **Preserves text structure**: Maintains the content and meaning while improving readability  
-- **Trims boundaries**: Removes leading and trailing whitespace  
+- **Removes excessive whitespace**: Converts multiple consecutive whitespace characters into single spaces
+- **Preserves text structure**: Maintains the content and meaning while improving readability
+- **Trims boundaries**: Removes leading and trailing whitespace
 - **Real-time processing**: Instantly shows cleaned results as you type
 
 ## ✨ Features
 
 ### 🔧 Core Functionality
 
-- **Intelligent whitespace removal**  
-- **Real-time text cleaning**  
+- **Intelligent whitespace removal**
+- **Real-time text cleaning**
 - **Preserve content integrity**
 
 ### 📊 Text Analytics
 
-- Character count (before & after)  
-- Word count tracker  
-- Token count with breakdown  
+- Character count (before & after)
+- Word count tracker
+- Token count with breakdown
 - Live-updating statistics
 
 ### 🎨 User Experience
 
-- Dark theme  
-- Responsive across devices  
-- Smooth UI animations  
+- Dark theme
+- Responsive across devices
+- Smooth UI animations
 - Keyboard + screen reader accessible
 
 ### ⚡ Productivity Features
 
-- One-click copy  
-- Smart visual feedback  
-- Undo last clear  
+- One-click copy
+- Smart visual feedback
+- Undo last clear
 - Clear all with confirmation
 
 ### 🧭 Safari Compatibility
 
-- Fully tested on Safari  
-- Uses backdrop filters with fallbacks  
+- Fully tested on Safari
+- Uses backdrop filters with fallbacks
 
 ## 📖 Usage
 
-1. Paste or type text in the **Original Text** panel  
-2. View the **Cleaned Text** on the right  
-3. Check **live stats** for characters, words, and tokens  
-4. Click **Copy** to save cleaned text  
+1. Paste or type text in the **Original Text** panel
+2. View the **Cleaned Text** on the right
+3. Check **live stats** for characters, words, and tokens
+4. Click **Copy** to save cleaned text
 5. Use **Clear All** to reset
 
 #### Example Transformation
 
 **Before:**
 
+```
 This    text   has   multiple       spaces   and
 weird formatting.
+```
 
 **After:**
 
-
+```
 This text has multiple spaces and weird formatting.
-
-
+```
 
 ## 🛠️ Technical Details
 
@@ -85,35 +85,33 @@ This text has multiple spaces and weird formatting.
 
 ### Browser Support
 
-- ✅ Chrome (latest)  
-- ✅ Firefox (latest)  
-- ✅ Safari 9+  
-- ✅ Edge  
+- ✅ Chrome (latest)
+- ✅ Firefox (latest)
+- ✅ Safari 9+
+- ✅ Edge
 - ✅ Mobile
 
 ### Performance Optimizations
 
-- Memoized calculations (`useMemo`)  
-- Debounced input handler  
+- Memoized calculations (`useMemo`)
+- Debounced input handler
 - Lightweight (only React CDN used)
 
 ## 📁 Project Structure
 
-
-
+```
 Empty-White-Space-Cleaner/
 ├── index.html         # Main single-page app
 ├── README.md          # This documentation
 └── .git/              # Git data
-
-`
+```
 
 ## 🚀 Local Development
 
 ```bash
 git clone https://github.com/Jason-Mendes/Empty-White-Space-Cleaner.git
 cd Empty-White-Space-Cleaner
-````
+```
 
 Then just open `index.html` in your browser, or use:
 
@@ -133,27 +131,27 @@ python -m http.server 8000
 
 ### Other Options
 
-* **Netlify**: drag & drop `index.html`
-* **Vercel**: connect your GitHub repo
-* **Any Web Server**: upload the `index.html` file
+- **Netlify**: drag & drop `index.html`
+- **Vercel**: connect your GitHub repo
+- **Any Web Server**: upload the `index.html` file
 
 ## 💡 Use Cases
 
 ### Content Creation
 
-* Clean up copied text from PDFs
-* Format text for blogs, docs, social posts
+- Clean up copied text from PDFs
+- Format text for blogs, docs, social posts
 
 ### Development
 
-* Clean config files or documentation
-* Format output logs or code comments
+- Clean config files or documentation
+- Format output logs or code comments
 
 ### Academic & Professional
 
-* Clean research notes
-* Format citations
-* Prep manuscripts for submission
+- Clean research notes
+- Format citations
+- Prep manuscripts for submission
 
 ## 🤝 Contributing
 
@@ -163,20 +161,22 @@ python -m http.server 8000
    ```bash
    git checkout -b feature/amazing-feature
    ```
+
 3. Edit `index.html`, test changes
 4. Commit with a clear message:
 
    ```bash
    git commit -m 'Add amazing feature'
    ```
+
 5. Push and open a pull request
 
 ### Dev Guidelines
 
-* Stick to the single-file approach
-* Keep styling consistent
-* Test on all modern browsers
-* Update the README if needed
+- Stick to the single-file approach
+- Keep styling consistent
+- Test on all modern browsers
+- Update the README if needed
 
 ## 📄 License
 
@@ -188,21 +188,18 @@ Found a bug or have a feature request? [Open an issue](https://github.com/Jason-
 
 ## 🗺️ Roadmap
 
-* [ ] Custom whitespace pattern options
-* [ ] Export to `.txt`, `.md`, and more
-* [ ] Batch processing
-* [ ] Side-by-side comparison mode
-* [ ] Keyboard shortcuts
-* [ ] Save custom cleaning presets
+- [ ] Custom whitespace pattern options
+- [ ] Export to `.txt`, `.md`, and more
+- [ ] Batch processing
+- [ ] Side-by-side comparison mode
+- [ ] Keyboard shortcuts
+- [ ] Save custom cleaning presets
 
 ---
 
 **Made with ❤️ by [Jason Mendes](https://github.com/Jason-Mendes)**
+
 *Transform messy text into clean, readable content with just one click!*
-
-
-
----
 
 ### ✅ Tips
 
