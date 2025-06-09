@@ -231,6 +231,7 @@
             backdrop-filter: blur(10px);
             animation: slideInRight 0.3s ease-out, slideOutRight 0.3s ease-out 2.7s;
             box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+            z-index: 1000;
         }
 
         .notification-success {
@@ -431,7 +432,8 @@
             );
         }
 
-        ReactDOM.render(<WhitespaceCleaner />, document.getElementById('root'));
+        const root = ReactDOM.createRoot(document.getElementById('root'));
+        root.render(<WhitespaceCleaner />);
     </script>
 </body>
 </html>
