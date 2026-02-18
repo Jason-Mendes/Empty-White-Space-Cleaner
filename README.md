@@ -1,204 +1,179 @@
-# Whitespace Cleaner
+Whitespace Cleaner                                                                                                                     
+   
+  A responsive web app that transforms messy text into clean, readable content by stripping out excessive whitespace while preserving    
+  structure and meaning.                                                                                                               
+                                                                                                                                       
+  **[Try it now →](https://jason-mendes.github.io/Empty-White-Space-Cleaner/)**
 
-A modern, responsive web application that transforms messy text into clean, readable content by removing excessive whitespace while preserving the structure and meaning of your text.
+  Overview
 
-## 🚀 Live Demo
+  Whitespace Cleaner handles text that's full of extra spaces, tabs, and newlines — the kind you get from copying out of PDFs, websites,
+  or poorly formatted documents.
 
-**[Try it now →](https://jason-mendes.github.io/Empty-White-Space-Cleaner/)**
+  What it does
 
-## 📋 Overview
+  - Collapses excessive whitespace — multiple consecutive spaces, tabs, and newlines become single spaces
+  - Preserves your content — the meaning and structure stay intact
+  - Trims boundaries — strips leading and trailing whitespace
+  - Works in real-time — results update as you type
 
-The Whitespace Cleaner is a powerful yet simple tool designed to help you clean up text that contains multiple consecutive whitespace characters (spaces, tabs, newlines). It's perfect for cleaning up copied text from PDFs, websites, or documents that have formatting issues.
+  Example
 
-### What it does
+  Before:
+  This    text   has   multiple       spaces   and
+  weird formatting.
 
-- **Removes excessive whitespace**: Converts multiple consecutive whitespace characters into single spaces
-- **Preserves text structure**: Maintains the content and meaning while improving readability
-- **Trims boundaries**: Removes leading and trailing whitespace
-- **Real-time processing**: Instantly shows cleaned results as you type
+  After:
+  This text has multiple spaces and weird formatting.
 
-## ✨ Features
+  Features
 
-### 🔧 Core Functionality
+  Core Functionality
 
-- **Intelligent whitespace removal**
-- **Real-time text cleaning**
-- **Preserve content integrity**
+  - Real-time whitespace cleaning
+  - Content integrity preserved through processing
+  - Handles spaces, tabs, and newline characters
 
-### 📊 Text Analytics
+  Text Analytics
 
-- Character count (before & after)
-- Word count tracker
-- Token count with breakdown
-- Live-updating statistics
+  - Character count (before and after)
+  - Word count tracker
+  - Token count with breakdown
+  - All stats update live as you type
 
-### 🎨 User Experience
+  User Experience
 
-- Dark theme
-- Responsive across devices
-- Smooth UI animations
-- Keyboard + screen reader accessible
+  - Dark theme throughout
+  - Responsive layout across devices
+  - Smooth animations and transitions
+  - Accessible via keyboard and screen readers
 
-### ⚡ Productivity Features
+  Productivity
 
-- One-click copy
-- Smart visual feedback
-- Undo last clear
-- Clear all with confirmation
+  - One-click copy to clipboard
+  - Visual feedback on actions
+  - Undo last clear
+  - Clear all with confirmation step
 
-### 🧭 Safari Compatibility
+  Safari Compatibility
 
-- Fully tested on Safari
-- Uses backdrop filters with fallbacks
+  - Fully tested on Safari
+  - Backdrop filters with proper fallbacks
 
-## 📖 Usage
+  Usage
 
-1. Paste or type text in the **Original Text** panel
-2. View the **Cleaned Text** on the right
-3. Check **live stats** for characters, words, and tokens
-4. Click **Copy** to save cleaned text
-5. Use **Clear All** to reset
+  1. Paste or type text in the Original Text panel
+  2. View the Cleaned Text on the right
+  3. Check the live stats for characters, words, and tokens
+  4. Click Copy to save the cleaned text
+  5. Use Clear All to reset everything
 
-#### Example Transformation
+  Technical Details
 
-**Before:**
+  Built With
 
-```
-This    text   has   multiple       spaces   and
-weird formatting.
-```
+  - React 18
+  - Vanilla CSS (Grid + Flexbox)
+  - Babel Standalone for in-browser JSX
+  - No build tools needed — it's a single index.html file
 
-**After:**
+  Browser Support
 
-```
-This text has multiple spaces and weird formatting.
-```
+  - Chrome (latest)
+  - Firefox (latest)
+  - Safari 9+
+  - Edge
+  - Mobile browsers
 
-## 🛠️ Technical Details
+  Performance
 
-### Built With
+  - Memoized calculations with useMemo
+  - Debounced input handling
+  - Lightweight — only React CDN dependency
 
-- **React 18**
-- **Vanilla CSS** (Grid & Flexbox)
-- **Babel Standalone** (in-browser JSX)
-- No build tools required — single `index.html` file
-- *https://claude.ai/chat/d2adf472-76b6-4bf9-b39c-5ce770203809*
-- *https://chatgpt.com/c/68469897-31dc-8012-850e-14ea61ade544*
+  Project Structure
 
-### Browser Support
+  Empty-White-Space-Cleaner/
+  ├── index.html         # The entire app
+  ├── README.md          # This file
+  └── .git/
 
-- ✅ Chrome (latest)
-- ✅ Firefox (latest)
-- ✅ Safari 9+
-- ✅ Edge
-- ✅ Mobile
+  Local Development
 
-### Performance Optimizations
+  git clone https://github.com/Jason-Mendes/Empty-White-Space-Cleaner.git
+  cd Empty-White-Space-Cleaner
 
-- Memoized calculations (`useMemo`)
-- Debounced input handler
-- Lightweight (only React CDN used)
+  Open index.html directly in your browser, or spin up a local server:
 
-## 📁 Project Structure
+  python -m http.server 8000
 
-```
-Empty-White-Space-Cleaner/
-├── index.html         # Main single-page app
-├── README.md          # This documentation
-└── .git/              # Git data
-```
+  Deployment
 
-## 🚀 Local Development
+  GitHub Pages (simplest option)
 
-```bash
-git clone https://github.com/Jason-Mendes/Empty-White-Space-Cleaner.git
-cd Empty-White-Space-Cleaner
-```
+  1. Push code to GitHub
+  2. Go to Settings → Pages
+  3. Choose "Deploy from a branch" → main → / (root)
+  4. Your app will be at: https://yourusername.github.io/Empty-White-Space-Cleaner/
 
-Then just open `index.html` in your browser, or use:
+  Other options
 
-```bash
-python -m http.server 8000
-```
+  - Netlify — drag and drop index.html
+  - Vercel — connect your GitHub repo
+  - Any web server — just host the single HTML file
 
-## 🌐 Deployment
+  Use Cases
 
-### GitHub Pages (Recommended)
+  Content Work
 
-1. Push code to GitHub
-2. Go to **Settings → Pages**
-3. Choose "Deploy from a branch" → `main` → `/ (root)`
-4. Access your app at:
-   `https://yourusername.github.io/Empty-White-Space-Cleaner/`
+  - Clean up text copied from PDFs
+  - Format content for blogs, docs, or social posts
 
-### Other Options
+  Development
 
-- **Netlify**: drag & drop `index.html`
-- **Vercel**: connect your GitHub repo
-- **Any Web Server**: upload the `index.html` file
+  - Tidy up config files or documentation
+  - Clean output logs or code comments
 
-## 💡 Use Cases
+  Academic / Professional
 
-### Content Creation
+  - Format research notes and citations
+  - Prep manuscripts for submission
 
-- Clean up copied text from PDFs
-- Format text for blogs, docs, social posts
+  Contributing
 
-### Development
+  1. Fork the repo
+  2. Create a feature branch:
+  git checkout -b feature/your-feature
+  3. Make your changes in index.html and test them
+  4. Commit with a clear message:
+  git commit -m 'Add your feature'
+  5. Push and open a pull request
 
-- Clean config files or documentation
-- Format output logs or code comments
+  Guidelines
 
-### Academic & Professional
+  - Keep the single-file approach
+  - Stay consistent with existing styles
+  - Test across modern browsers
+  - Update the README if your change warrants it
 
-- Clean research notes
-- Format citations
-- Prep manuscripts for submission
+  License
 
-## 🤝 Contributing
+  Licensed under the LICENSE.
 
-1. Fork this repo
-2. Create a feature branch:
+  Issues & Support
 
-   ```bash
-   git checkout -b feature/amazing-feature
-   ```
+  Found a bug or have a feature idea? https://github.com/Jason-Mendes/Empty-White-Space-Cleaner/issues.
 
-3. Edit `index.html`, test changes
-4. Commit with a clear message:
+  Roadmap
 
-   ```bash
-   git commit -m 'Add amazing feature'
-   ```
+  - Custom whitespace pattern options
+  - Export to .txt, .md, and more
+  - Batch processing
+  - Side-by-side comparison mode
+  - Keyboard shortcuts
+  - Saveable cleaning presets
 
-5. Push and open a pull request
+  ---
+  **Made with ❤️  by [Jason Mendes](https://github.com/Jason-Mendes)**
 
-### Dev Guidelines
-
-- Stick to the single-file approach
-- Keep styling consistent
-- Test on all modern browsers
-- Update the README if needed
-
-## 📄 License
-
-Licensed under the [MIT License](LICENSE).
-
-## 🐛 Issues & Support
-
-Found a bug or have a feature request? [Open an issue](https://github.com/Jason-Mendes/Empty-White-Space-Cleaner/issues)
-
-## 🗺️ Roadmap
-
-- [ ] Custom whitespace pattern options
-- [ ] Export to `.txt`, `.md`, and more
-- [ ] Batch processing
-- [ ] Side-by-side comparison mode
-- [ ] Keyboard shortcuts
-- [ ] Save custom cleaning presets
-
----
-
-**Made with ❤️ by [Jason Mendes](https://github.com/Jason-Mendes)**
-
-*Transform messy text into clean, readable content with just one click!*
+  Clean up messy text with one click.
