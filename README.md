@@ -3,7 +3,7 @@ Whitespace Cleaner
 A responsive web app that transforms messy text into clean, readable content by stripping out excessive whitespace while preserving
 structure and meaning.
 
-Try it now →
+**[Try it now →](https://jason-mendes.github.io/Empty-White-Space-Cleaner/)** 
 
 Overview
 
@@ -135,7 +135,7 @@ Licensed under the LICENSE.
 
 Issues & Support
 
-Found a bug or have a feature idea? https://github.com/Jason-Mendes/Empty-White-Space-Cleaner/issues.
+Found a bug or have a feature request? [Open an issue](https://github.com/Jason-Mendes/Empty-White-Space-Cleaner/issues)  
 
 Roadmap
 
@@ -145,6 +145,6 @@ Batch processing
 Side-by-side comparison mode
 Keyboard shortcuts
 Saveable cleaning presets
-Made with ❤️ by Jason Mendes
+**Made with ❤️  by [Jason Mendes](https://github.com/Jason-Mendes)**
 
 Clean up messy text with one click.
